@@ -1,0 +1,23 @@
+/* Menu utama aktif: latar hijau (success), teks putih */
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: #28a745 !important;
+    color: #ffffff !important;
+}
+
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active i,
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active p {
+    color: #ffffff !important;
+}
+
+/* Submenu aktif: garis kiri hijau, background tetap putih/abu terang */
+.main-sidebar .nav-treeview .nav-link.active {
+    background-color: #f8f9fa !important; /* abu terang */
+    color: #343a40 !important;
+    border-left: 4px solid #28a745;
+    padding-left: calc(1rem - 4px);
+}
+
+.main-sidebar .nav-treeview .nav-link.active i,
+.main-sidebar .nav-treeview .nav-link.active p {
+    color: #343a40 !important;
+}

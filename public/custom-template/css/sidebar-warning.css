@@ -1,0 +1,23 @@
+/* Menu utama (nav-item langsung) yang aktif: background kuning (warning) */
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: #ffc107 !important; /* Bootstrap warning */
+    color: #212529 !important; /* text-dark */
+}
+
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active i,
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active p {
+    color: #212529 !important;
+}
+
+/* Submenu (nav-treeview) yang aktif: garis kiri kuning, background tetap ringan */
+.main-sidebar .nav-treeview .nav-link.active {
+    background-color: #f8f9fa !important; /* abu-abu sangat terang */
+    color: #343a40 !important;            /* teks abu gelap */
+    border-left: 4px solid #ffc107;       /* garis kiri kuning */
+    padding-left: calc(1rem - 4px);       /* atur padding agar seimbang */
+}
+
+.main-sidebar .nav-treeview .nav-link.active i,
+.main-sidebar .nav-treeview .nav-link.active p {
+    color: #343a40 !important;
+}

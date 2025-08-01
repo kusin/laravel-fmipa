@@ -1,0 +1,23 @@
+/* Menu utama aktif: background info (biru muda) */
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: #17a2b8 !important; /* info */
+    color: #ffffff !important;
+}
+
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active i,
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active p {
+    color: #ffffff !important;
+}
+
+/* Submenu aktif: garis kiri info, latar tetap putih atau abu terang */
+.main-sidebar .nav-treeview .nav-link.active {
+    background-color: #f8f9fa !important; /* abu sangat terang */
+    color: #343a40 !important;
+    border-left: 4px solid #17a2b8;
+    padding-left: calc(1rem - 4px);
+}
+
+.main-sidebar .nav-treeview .nav-link.active i,
+.main-sidebar .nav-treeview .nav-link.active p {
+    color: #343a40 !important;
+}

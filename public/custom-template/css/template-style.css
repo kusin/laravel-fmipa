@@ -1,0 +1,21 @@
+label.required::after {
+    content: " *";
+    color: red;
+}
+
+.logo-img {
+    display: block;
+    max-width: 128px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.badge-custom {
+    font-size: 15px;
+    font-weight: normal;
+    padding: 5px 10px;
+    line-height: 1.2;
+    display: inline-block;
+}

@@ -1,0 +1,68 @@
+.modal-success-outline {
+    border: 1px solid #28a745;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-success-outline .modal-header {
+    background-color: transparent;
+    color: #343a40;
+    border-bottom: 1px solid #28a745;
+}
+
+.modal-success-outline .modal-body {
+    background-color: transparent;
+    color: #343a40;
+    border-bottom: 1px solid #28a745;
+}
+
+.modal-success-outline .modal-footer {
+    background-color: transparent;
+}
+
+/* -------------------------------------------------------------- */
+
+.modal-warning-outline {
+    border: 1px solid #ffc107;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-warning-outline .modal-header {
+    background-color: transparent;
+    color: #343a40;
+    border-bottom: 1px solid #ffc107;
+}
+
+.modal-warning-outline .modal-body {
+    background-color: transparent;
+    color: #343a40;
+    border-bottom: 1px solid #ffc107;
+}
+
+.modal-warning-outline .modal-footer {
+    background-color: transparent;
+}
+
+/* -------------------------------------------------------------- */
+
+.modal-danger-outline {
+    border: 1px solid #dc3545;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-danger-outline .modal-header {
+    background-color: transparent;
+    color: #343a40;
+    border-bottom: 1px solid #dc3545;
+}
+
+.modal-danger-outline .modal-body {
+    background-color: transparent;
+    color: #343a40;
+    border-bottom: 1px solid #dc3545;
+}
+
+.modal-danger-outline .modal-footer {
+    background-color: transparent;
+}
+
+/* -------------------------------------------------------------- */
