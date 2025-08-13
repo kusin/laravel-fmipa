@@ -10,7 +10,7 @@
         <div class="col-sm-10">
             <div class="card card-outline card-info">
                 <div class="card-header text-center d-flex flex-column align-items-center p-4">
-                    <img src="{{ asset('public/adminlte/dist/img/logoUI-new.png') }}" alt="Logo Kampus" class="logo-img" />
+                    <img src="{{ asset('adminlte/dist/img/logoUI-new.png') }}" alt="Logo Kampus" class="logo-img" />
                     <span class="card-title">Form Login | LST - FMIPA Universitas Indonesia</span>
                 </div>
                 <div class="card-body">
@@ -34,7 +34,7 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <p class="text-dark">Kontak WA. Aryajaya Alamsyah - 0819-3285-5946. Jika terdapat kendala login dan registrasi.</p>
+                    <p class="text-dark">Jika terdapat kendala-kendala harap hubungi administrator. Kontak WA Akhmad Futukillah F.A. - 0858-0677-3755.</p>
                     <span class="text-dark">Rekomendasi untuk Kenyamanan Penggunaan:</span>
                     <ul class="text-dark">
                         <li>Browser - Google Chrome, Mozila Firefox, atau Microsoft Edge.</li>
