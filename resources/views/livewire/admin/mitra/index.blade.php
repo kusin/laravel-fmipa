@@ -56,6 +56,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Aksi</th>
+                                        <th>NIK/NPWP</th>
                                         <th>Nama Lengkap</th>
                                         <th>Email Aktif</th>
                                         <th>Telp WA</th>
@@ -77,10 +78,11 @@
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                         </td>
-                                        <td>{{ $item->nama_mitra }}</td>
-                                        <td>{{ $item->email_mitra }}</td>
-                                        <td>{{ $item->telp_mitra }}</td>
-                                        <td>{{ $item->nama_institusi }}</td>
+                                        <td>{{ $item->nik_mitra ?? '-' }}</td>
+                                        <td>{{ $item->nama_mitra ?? '-' }}</td>
+                                        <td>{{ $item->email_mitra ?? '-' }}</td>
+                                        <td>{{ $item->telp_mitra ?? '-' }}</td>
+                                        <td>{{ $item->nama_institusi ?? '-' }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -117,6 +119,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="form-group mb-4">
+                        <label for="nik_mitra" class="required">NIK/NPWP</label>
+                        <input wire:model="nik_mitra" type="text" class="form-control form-control-border border-info border-width-2" id="nik_mitra" placeholder="Contoh. Nomor NIK Mitra (16 Digit)" disabled>
+                    </div>
                     <div class="form-group mb-4">
                         <label for="nama_mitra" class="required">Nama Mitra</label>
                         <input wire:model="nama_mitra" type="text" class="form-control form-control-border border-info border-width-2" id="nama_mitra" placeholder="Contoh. Aryajaya Alamsyah" disabled>

@@ -9,12 +9,13 @@ use Livewire\Component;
 
 class Edit extends Component
 {
-    public $id_mitra, $nama_mitra, $email_mitra, $telp_mitra, $nama_institusi, $alamat_institusi, $password;
+    public $id_mitra, $nik_mitra, $nama_mitra, $email_mitra, $telp_mitra, $nama_institusi, $alamat_institusi, $password;
     public $status_data, $created_at, $updated_at, $deleted_at;
 
     public function resetForm()
     {
         $this->id_mitra = null;
+        $this->nik_mitra = null;
         $this->nama_mitra = null;
         $this->email_mitra = null;
         $this->telp_mitra = null;
@@ -31,6 +32,7 @@ class Edit extends Component
     {
         $mitra = Mitra::where('id_mitra', $id)->firstOrFail();
         $this->id_mitra = $mitra->id_mitra;
+        $this->nik_mitra = $mitra->nik_mitra;
         $this->nama_mitra = $mitra->nama_mitra;
         $this->email_mitra = $mitra->email_mitra;
         $this->telp_mitra = $mitra->telp_mitra;
@@ -41,6 +43,7 @@ class Edit extends Component
     public function update()
     {
         $this->validate([
+            'nik_mitra' => 'required|string|max:255',
             'nama_mitra' => 'required|string|max:255',
             'email_mitra' => 'required|email|max:255|unique:tb_mitra,email_mitra,' . $this->id_mitra . ',id_mitra',
             'telp_mitra' => 'required|string|max:20',
@@ -51,6 +54,7 @@ class Edit extends Component
         $mitra = Mitra::where('id_mitra', $this->id_mitra)->firstOrFail();
 
         $updateData = [
+            'nik_mitra' => $this->nik_mitra,
             'nama_mitra' => $this->nama_mitra,
             'email_mitra' => $this->email_mitra,
             'telp_mitra' => $this->telp_mitra,

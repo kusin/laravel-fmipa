@@ -9,12 +9,13 @@ use Livewire\Component;
 
 class Create extends Component
 {
-    public $id_mitra, $nama_mitra, $email_mitra, $telp_mitra, $nama_institusi, $alamat_institusi, $password;
+    public $id_mitra, $nik_mitra, $nama_mitra, $email_mitra, $telp_mitra, $nama_institusi, $alamat_institusi, $password;
     public $status_data, $created_at, $updated_at, $deleted_at;
 
     public function resetForm()
     {
         $this->id_mitra = null;
+        $this->nik_mitra = null;
         $this->nama_mitra = null;
         $this->email_mitra = null;
         $this->telp_mitra = null;
@@ -32,6 +33,7 @@ class Create extends Component
     public function store()
     {
         $this->validate([
+            'nik_mitra' => 'required|string|max:255',
             'nama_mitra' => 'required|string|max:255',
             'email_mitra' => 'required|email|max:255|unique:tb_mitra,email_mitra',
             'telp_mitra' => 'required|string|max:20',
@@ -40,6 +42,7 @@ class Create extends Component
         ]);
 
         Mitra::create([
+            'nik_mitra' => $this->nik_mitra,
             'nama_mitra' => $this->nama_mitra,
             'email_mitra' => $this->email_mitra,
             'telp_mitra' => $this->telp_mitra,

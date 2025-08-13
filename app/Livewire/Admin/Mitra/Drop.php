@@ -8,12 +8,13 @@ use Livewire\Component;
 
 class Drop extends Component
 {
-    public $id_mitra, $nama_mitra, $email_mitra, $telp_mitra, $nama_institusi, $alamat_institusi, $status_data;
+    public $id_mitra, $nik_mitra, $nama_mitra, $email_mitra, $telp_mitra, $nama_institusi, $alamat_institusi, $status_data;
     public $created_at, $updated_at, $deleted_at;
 
     public function resetForm()
     {
         $this->id_mitra = null;
+        $this->nik_mitra = '';
         $this->nama_mitra = '';
         $this->email_mitra = '';
         $this->telp_mitra = '';
@@ -29,6 +30,7 @@ class Drop extends Component
     {
         $mitra = Mitra::where('id_mitra', $id)->firstOrFail();
         $this->id_mitra = $mitra->id_mitra;
+        $this->nik_mitra = $mitra->nik_mitra;
         $this->nama_mitra = $mitra->nama_mitra;
         $this->email_mitra = $mitra->email_mitra;
         $this->telp_mitra = $mitra->telp_mitra;

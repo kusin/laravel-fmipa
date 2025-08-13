@@ -25,6 +25,11 @@
                 <div class="card-body">
                     <form>
                         <div class="form-group mb-4">
+                            <label for="nik_mitra" class="required">NIK/NPWP</label>
+                            <input wire:model="nik_mitra" type="text" class="form-control form-control-border border-danger border-width-2" id="nik_mitra" placeholder="Contoh. Nomor NIK Mitra (16 Digit)." disabled>
+                            @error('nik_mitra') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+                        <div class="form-group mb-4">
                             <label for="nama_mitra" class="required">Nama Mitra</label>
                             <input wire:model="nama_mitra" type="text" class="form-control form-control-border border-danger border-width-2" id="nama_mitra" placeholder="Contoh. Aryajaya Alamsyah" disabled>
                             @error('nama_mitra') <span class="text-danger">{{ $message }}</span> @enderror

@@ -72,15 +72,15 @@
                                     <tr>
                                         <td class="text-left">
                                             <a class="btn btn-sm btn-outline-info" wire:click="showData({{ $item->id_hasil_pengujian }})" data-toggle="modal" data-target="#confirmModal">
-                                                <i class="fa-solid fa-display"></i>
+                                                <i class="fa-solid fa-display mr-1"></i> Detail
                                             </a>
                                             @if($item->status_pendaftaran == "Belum Disetujui")
                                             <a class="btn btn-sm btn-outline-warning" wire:navigate href="{{ route('mitra.pengujian-material.edit', ['id' => $item->id_hasil_pengujian]) }}">
-                                                <i class="fa-solid fa-edit"></i>
+                                                <i class="fa-solid fa-edit mr-1"></i> Ubah
                                             </a>
                                             @elseif($item->status_pendaftaran == null)
                                             <a class="btn btn-sm btn-outline-warning" wire:navigate href="{{ route('mitra.pengujian-material.edit', ['id' => $item->id_hasil_pengujian]) }}">
-                                                <i class="fa-solid fa-edit"></i>
+                                                <i class="fa-solid fa-edit mr-1"></i> Ubah
                                             </a>
                                             @endif
                                         </td>

@@ -24,6 +24,11 @@
                 <div class="card-body">
                     <form>
                         <div class="form-group mb-4">
+                            <label for="nik_mitra" class="required">NIK/NPWP</label>
+                            <input wire:model="nik_mitra" type="text" class="form-control form-control-border border-warning border-width-2" id="nik_mitra" placeholder="Contoh. Nomor NIK Mitra (16 Digit).">
+                            @error('nik_mitra') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+                        <div class="form-group mb-4">
                             <label for="nama_mitra" class="required">Nama Mitra</label>
                             <input wire:model="nama_mitra" type="text" class="form-control form-control-border border-warning border-width-2" id="nama_mitra" placeholder="Contoh. Aryajaya Alamsyah">
                             @error('nama_mitra') <span class="text-danger">{{ $message }}</span> @enderror
@@ -47,9 +52,8 @@
                             <label for="password" class="required">Password</label>
                             <input wire:model="password" type="password" class="form-control form-control-border border-warning border-width-2" id="password" placeholder="Password minimal 8 karakter">
                             @error('password') <span class="text-danger">{{ $message }}</span> @enderror
-                            <div class="form-group form-check mt-2">
-                                <input type="checkbox" class="form-check-input" id="showPassword" onclick="togglePassword()">
-                                <label class="form-check-label" for="showPassword">Tampilkan password</label>
+                            <div class="form-group mt-2">
+                                <a href="javascript:void(0)" class="text-success" onclick="togglePassword()" id="togglePasswordText">Tampilkan password</a>
                             </div>
                         </div>
                         <div class="form-group">
@@ -99,8 +103,14 @@
     <script>
         function togglePassword() {
             const input = document.getElementById('password');
-            const checkbox = document.getElementById('showPassword');
-            input.type = checkbox.checked ? 'text' : 'password';
+            const toggleText = document.getElementById('togglePasswordText');
+            if (input.type === 'password') {
+                input.type = 'text';
+                toggleText.textContent = 'Sembunyikan password';
+            } else {
+                input.type = 'password';
+                toggleText.textContent = 'Tampilkan password';
+            }
         }
     </script>
 

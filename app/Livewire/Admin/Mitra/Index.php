@@ -42,15 +42,16 @@ class Index extends Component
 
     // ----------------------------------------------------
 
-    public $id_mitra, $nama_mitra, $email_mitra, $telp_mitra, $nama_institusi, $alamat_institusi, $status_data;
+    public $id_mitra, $nik_mitra, $nama_mitra, $email_mitra, $telp_mitra, $nama_institusi, $alamat_institusi, $status_data;
     public $created_at, $updated_at, $deleted_at;
 
     public function showData($id)
     {
         $mitra = Mitra::where('id_mitra', $id)->firstOrFail();
-        $this->nama_mitra = $mitra->nama_mitra;
-        $this->email_mitra = $mitra->email_mitra;
-        $this->telp_mitra = $mitra->telp_mitra;
-        $this->nama_institusi = $mitra->nama_institusi;
+        $this->nik_mitra = $mitra->nik_mitra ?? '-';
+        $this->nama_mitra = $mitra->nama_mitra ?? '-';
+        $this->email_mitra = $mitra->email_mitra ?? '-';
+        $this->telp_mitra = $mitra->telp_mitra ?? '-';
+        $this->nama_institusi = $mitra->nama_institusi ?? '-';
     }
 }
