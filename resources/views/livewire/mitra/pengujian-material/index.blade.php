@@ -86,7 +86,7 @@
                                         </td>
                                         <td class="text-left">{{ \Carbon\Carbon::parse($item->tanggal_pendaftaran)->format('Y-m-d') }}</td>
                                         <td>{{ $item->mitra->nama_mitra ?? '-' }} - {{ $item->mitra->nama_institusi ?? '-' }}</td>
-                                        <td class="text-left">{{ $item->jenisPengujian->jenis_pengujian ?? '-' }}</td>
+                                        <td class="text-left">{{ $item->jenisPengujian->nama_pengujian ?? '-' }} + {{ $item->jenisPengujian->jenis_pengujian ?? '-' }}</td>
                                         <td class="text-left">{{ $item->jenis_sampel }} Unit</td>
                                         <td class="text-left">{{ $item->qty_sampel }} Unit</td>
                                         <td class="text-right">{{ formatRupiah($item->nominal_pembayaran) }}</td>
@@ -290,7 +290,7 @@
                 <div class="modal-footer">
                     <div class="row w-100">
                         <div class="col-sm-10 text-left">
-                            <p class="text-danger">Jika terdapat ketidaksesuaian harap hubungi administrator. WA 0819-3285-5946</p>
+                            <p class="text-danger">Jika terdapat ketidaksesuaian harap hubungi administrator. WA 0858-0677-3755</p>
                         </div>
                         <div class="col-sm-2 text-right">
                             <button type="button" class="btn btn-outline-danger" data-dismiss="modal"><i class="fas fa-undo mr-1"></i> Tutup</button>

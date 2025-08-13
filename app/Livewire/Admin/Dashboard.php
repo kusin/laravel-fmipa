@@ -33,7 +33,7 @@ class Dashboard extends Component
         $this->total_pemasukan = HasilPengujian::where('status_pembayaran', 'Sudah Dibayar')->where('status_data', 'Aktif')->sum('nominal_pembayaran');
 
         // Informasi Hasil Pengujian
-        $this->status_verifikasi = JenisPengujian::select('nama_pengujian')
+        $this->status_verifikasi = JenisPengujian::select('nama_pengujian', 'jenis_pengujian')
             ->withCount([
                 'hasilPengujian as belum_diverifikasi' => function ($query) {
                     $query->where('status_verifikasi', 'Belum Diverifikasi');
@@ -47,7 +47,7 @@ class Dashboard extends Component
             ])->orderBy('nama_pengujian')->get();
 
         // Informasi Hasil Pengujian
-        $this->status_pengujian = JenisPengujian::select('nama_pengujian')
+        $this->status_pengujian = JenisPengujian::select('nama_pengujian', 'jenis_pengujian')
             ->withCount([
                 'hasilPengujian as belum_selesai' => function ($query) {
                     $query->where('status_pengujian', 'Belum Selesai');

@@ -50,20 +50,11 @@
                 <a wire:navigate href="{{ route('admin.jenis-pengujian.index') }}" class="small-box-footer"><i class="fa-solid fa-clone mr-1"></i> Selengkapnya</a>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <div class="small-box bg-success">
                 <div class="inner">
                     <h3>{{formatRupiah($total_pemasukan)}}</h3>
-                    <p class="text-light">Total Pemasukan (sudah valid)</p>
-                </div>
-                <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="small-box bg-danger">
-                <div class="inner">
-                    <h3>Rp. 0</h3>
-                    <p class="text-light">Total Pengeluaran (coming soon)</p>
+                    <p class="text-light">Total Pemasukan</p>
                 </div>
                 <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
             </div>
@@ -95,7 +86,7 @@
                         <tbody>
                             @foreach($status_verifikasi as $item)
                             <tr>
-                                <td class="text-left">{{ $item->nama_pengujian }}</td>
+                                <td class="text-left">{{ $item->nama_pengujian }} + {{ $item->jenis_pengujian }}</td>
                                 <td class="text-center">{{ number_format($item->sudah_diverifikasi ?? 0) }}</td>
                                 <td class="text-center">{{ number_format($item->belum_diverifikasi ?? 0) }}</td>
                             </tr>
@@ -162,7 +153,7 @@
                         <tbody>
                             @foreach($status_pengujian as $item)
                             <tr>
-                                <td class="text-left">{{ $item->nama_pengujian }}</td>
+                                <td class="text-left">{{ $item->nama_pengujian }} + {{ $item->jenis_pengujian }}</td>
                                 <td class="text-center">{{ number_format($item->sudah_selesai ?? 0) }}</td>
                                 <td class="text-center">{{ number_format($item->belum_selesai ?? 0) }}</td>
                             </tr>

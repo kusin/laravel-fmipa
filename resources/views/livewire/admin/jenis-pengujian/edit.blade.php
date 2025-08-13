@@ -71,7 +71,7 @@
                             </div>
                             <div class="form-group col-sm-4 mb-4">
                                 <label for="biaya_pengujian" class="required">Biaya Pengujian</label>
-                                <input wire:model="biaya_pengujian" type="text" class="form-control form-control-border border-warning border-width-2" id="biaya_pengujian" placeholder="Biaya Pengujian tidak boleh kosong">
+                                <input wire:model="biaya_pengujian" type="number" class="form-control form-control-border border-warning border-width-2" id="biaya_pengujian" placeholder="Biaya Pengujian tidak boleh kosong">
                                 @error('biaya_pengujian') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                         </div>

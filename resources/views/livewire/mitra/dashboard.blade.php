@@ -6,7 +6,7 @@
     <div class="row mb-3">
         <div class="col-sm-12">
             <div class="callout callout-success pb-1">
-                <p class="text-dark">Jika terdapat kendala-kendala harap hubungi administrator. Kontak WA Aryajaya Alamsyah - 0819-3285-5946.</p>
+                <p class="text-dark">Jika terdapat kendala-kendala harap hubungi administrator. Kontak WA Akhmad Futukillah F.A. - 0858-0677-3755.</p>
                 <span class="text-dark">Rekomendasi untuk Kenyamanan Penggunaan:</span>
                 <ul class="text-dark">
                     <li>Browser - Google Chrome, Mozila Firefox, atau Microsoft Edge.</li>
@@ -169,7 +169,7 @@
             <div class="card card-outline card-success">
                 <div class="card-header">
                     <span class="text-dark">
-                        <strong>{{ $item->nama_pengujian }} - {{ $item->jenis_pengujian }}</strong>
+                        <strong>{{ $item->nama_pengujian }} + {{ $item->jenis_pengujian }}</strong>
                     </span>
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -198,7 +198,7 @@
                     </a>
                 </div>
                 <div class="card-footer">
-                    <span class="text-danger">Biaya pengujian {{ formatRupiah($item->biaya_pengujian)}} persampel</span>
+                    <span class="text-danger">Biaya pengujian {{ formatRupiah($item->biaya_pengujian)}} persampel (Mahasiswa disc. 50%)</span>
                 </div>
             </div>
         </div>

@@ -29,7 +29,7 @@
                         {{-- Nama Mitra --}}
                         <div class="form-group mb-4">
                             <label for="id_mitra" class="required">Nama Mitra</label>
-                            <select wire:model="id_mitra" class="form-control form-control-border border-warning border-width-2" id="id_mitra">
+                            <select wire:model="id_mitra" class="form-control form-control-border border-warning border-width-2" id="id_mitra" disabled>
                                 <option value="">-- Pilih Mitra --</option>
                                 @foreach ($listMitra as $mitra)
                                 <option value="{{ $mitra->id_mitra }}">{{ $mitra->nama_mitra }} - {{ $mitra->nama_institusi }}</option>
