@@ -12,8 +12,8 @@ class JenisPengujianSeeder extends Seeder
     {
         JenisPengujian::insert([
             [
-                'nama_pengujian' => 'X-Ray Diffraction',
-                'jenis_pengujian' => 'XRD',
+                'nama_pengujian' => 'XRD',
+                'jenis_pengujian' => 'Pengujian',
                 'deskripsi_pengujian' => 'Deskirpsi pengujian - lorem ipsum text',
                 'alat_pengujian' => 'Alat pengujian - lorem ipsum text',
                 'jumlah_alat' => '1 buah',
@@ -27,8 +27,8 @@ class JenisPengujianSeeder extends Seeder
                 'deleted_at' => null
             ],
             [
-                'nama_pengujian' => 'X-Ray Fluorescence',
-                'jenis_pengujian' => 'XRF',
+                'nama_pengujian' => 'XRF',
+                'jenis_pengujian' => 'Pengujian',
                 'deskripsi_pengujian' => 'Deskirpsi pengujian - lorem ipsum text',
                 'alat_pengujian' => 'Alat pengujian - lorem ipsum text',
                 'jumlah_alat' => '2 buah',
@@ -42,8 +42,8 @@ class JenisPengujianSeeder extends Seeder
                 'deleted_at' => null
             ],
             [
-                'nama_pengujian' => 'Scanning Electron Microscopy – EDX',
-                'jenis_pengujian' => 'SEM-EDX',
+                'nama_pengujian' => 'SEM-EDX',
+                'jenis_pengujian' => 'Pengujian + Analisis',
                 'deskripsi_pengujian' => 'Deskirpsi pengujian - lorem ipsum text',
                 'alat_pengujian' => 'Alat pengujian - lorem ipsum text',
                 'jumlah_alat' => '3 buah',
@@ -57,8 +57,8 @@ class JenisPengujianSeeder extends Seeder
                 'deleted_at' => null
             ],
             [
-                'nama_pengujian' => 'UV-Visible Spectroscopy',
-                'jenis_pengujian' => 'UV-Vis',
+                'nama_pengujian' => 'UV-Vis',
+                'jenis_pengujian' => 'Pengujian + Analisis',
                 'deskripsi_pengujian' => 'Deskirpsi pengujian - lorem ipsum text',
                 'alat_pengujian' => 'Alat pengujian - lorem ipsum text',
                 'jumlah_alat' => '4 buah',
@@ -72,8 +72,8 @@ class JenisPengujianSeeder extends Seeder
                 'deleted_at' => null
             ],
             [
-                'nama_pengujian' => 'Fourier Transform Infrared Spectroscopy',
-                'jenis_pengujian' => 'FTIR',
+                'nama_pengujian' => 'FTIR',
+                'jenis_pengujian' => 'Pengujian + Analisis',
                 'deskripsi_pengujian' => 'Deskirpsi pengujian - lorem ipsum text',
                 'alat_pengujian' => 'Alat pengujian - lorem ipsum text',
                 'jumlah_alat' => '5 buah',

@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('tb_mitra', function (Blueprint $table) {
             // kolom table mitra
             $table->increments('id_mitra');
-            $table->string('nik')->nullable()->default(null);
+            $table->string('nik_mitra')->nullable()->default(null);
             $table->string('nama_mitra')->nullable()->default(null);
             $table->string('email_mitra')->nullable()->default(null);
             $table->string('telp_mitra')->nullable()->default(null);
